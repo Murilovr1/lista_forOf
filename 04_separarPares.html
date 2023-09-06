@@ -11,10 +11,18 @@
 
     //PROCESSAMENTO
     listaPar = [];
-
-    for(let numero of listaDeItens) {
-        if(numero % 2 == 0) listaPar.push(numero);
+    let listaPares = []
+    for (let item of listaDeItens) {
+        if (!isNaN(item)) {
+            let numero = item
+            if (numero % 2 == 0) {
+                listaPares.push(numero);
+            }
+        }
     }
+
+    //SAÍDA
+    document.write(`Os números pares são ${listaPares.join(" - ")}. A quantidade de elementos originais é ${listaDeItens.length}.`);
 
 
     //SAÍDA
